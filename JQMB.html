@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)https://lms.tnua.edu.tw/sysdata/3/29803/doc/a641c85fbf25a8a1/attach/416307.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JQMB</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" >
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script >
+	$(document).on("mobileinit",function()
+	{
+		$.mobile.pageLoadErrorMessage="喔!shit 該死";
+		$.mobile.pageLoadErrorMessageTheme="a";
+	});
+</script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script>
+$(document).one("pageinit",function()
+{
+$("#getBtn").on("click",function()
+{
+	$.mobile.changePage("fun_cp_get.php",
+	{
+		type:"get",
+		data:{
+			send:'get',
+			sendval:1
+		},
+		transition:'slideup'
+
+	});
+});
+});
+$(document).one("pageinit",function()
+{
+$("#postBtn").on("click",function()
+{
+	$.mobile.changePage("fun_cp_get.php",
+	{
+		type:"post",
+		data:{
+			send:'post',
+			sendval:2
+		},transition:'slideup'
+
+	});
+});
+});
+</script>
+</head>
+
+<body>
+<div data-role="page" data-theme="a" id="home">
+	<div id="panelOverlay" data-role="panel" data-position="left" data-display="overlay"> 
+    <h3>Overlay</h3>
+    <a href="#page7" data-role="button">input </a>
+    <a href="#page8" data-role="button">Date Time </a>
+    <a href="#page9" data-role="button">Slider</a>
+    <a href="#page10" data-role="button">Select</a>
+    <a href="#page11" data-role="button">SelectMenu</a>
+    <a href="#page12" data-role="button">表單</a>
+
+    <p><a href="#" data-role="button" data-rel="close">Close</a> </p>
+	</div>
+
+	<div id="panelReveal" data-role="panel" data-position="right" data-display="reveal" data-theme="b"> 
+    <h3>Reval</h3>
+    <p><a href="#" data-role="button" data-rel="close">Close</a> </p>
+	</div>
+
+	<div id="panelPush" data-role="panel" data-position="left" data-display="push" > 
+    <h3>Push</h3>
+    <p><a href="#" data-role="button" data-rel="close">Close</a> </p>
+	</div>
+
+
+
+<div data-role="header"data-position="fixed" >
+	<a href="#">Back</a>
+	<h1>首頁_布景主題</h1>
+	<a href="#panelOverlay" data-icon="bars"  data-inset="true" >options</a>
+	
+</div>
+<div data-role="content">
+
+	<p id="showevent1"> Nice to see you!</p>
+	<h1>切換佈景主題</h1>
+	<p><a href="#page2">佈景主題B</a> </p>
+	<P><a href="#page3">佈景主題C</a> </P>
+		<div data-role="controlgroup">
+	<a href="#page4" data-transition="fade" data-role="button">Fade </a>
+	<a href="#panelReveal"><input type="button" name="" value="panelReveal" data-icon="power" ></a></div>
+	<div data-role="controlgroup" data-type="horizontal">
+	<a href="#panelPush"> <input type="submit" name="" value="Push"  data-icon="heart" data-iconpos="top"></a>
+	<input type="reset" name="" value="按鈕四"  data-icon="heart" data-iconpos="top"></div>
+	<a href="#page4" data-transition="flip"  data-role="button" data-icon="bars" >Flip </a></p>
+	<a href="#page4" data-transition="flow"  data-role="button" data-icon="eye" data-iconpos="top"data-inline="true">Flow </a>
+	<a href="#page4" data-transition="pop"  data-role="button" data-icon="plus" data-iconpos="top" data-inline="true">Pop </a>
+	<a href="#page4" data-transition="slide"  data-role="button" data-icon="edit" data-iconpos="top" data-inline="true">slide </a>
+	<p><a href="#page4" data-transition="slidedown"  data-role="button" data-icon="minus" data-iconpos="top" >slidedown </a></p>
+	<p><a href="#page4" data-transition="slidefade">slidefade </a></p>
+	<p><a href="#page4" data-transition="slideup">slideup </a></p>
+	<p><a href="#page4" data-transition="turn">turn </a></p>
+	<p><a href="#page4" data-transition="none">none </a></p>
+
+</div>
+<div data-role="footer" data-position="fixed"> CopyRight 2021 </div>
+ </div>
+
+<div data-role="page" data-theme="b" id="page2">  
+	<div data-role="header" data-add-back-btn="true">
+		<h1>頁首_佈景主題B</h1>
+	</div>
+	<div data-role="content">佈景主題B </div>
+	<div data-role="footer" data-position="fixed"><h4>頁尾</h4>  </div>
+</div>
+<div data-role="page" data-theme="c" id="page3">  
+	<div data-role="header" data-add-back-btn="true">
+		<h1>頁首_佈景主題C</h1>
+	</div>
+	<div data-role="content">佈景主題C </div>
+	<div data-role="footer" data-position="fixed"><h4>頁尾</h4>  </div>
+</div>
+<div data-role="page" data-theme="b" id="page4">  
+	<div data-role="header" data-add-back-btn="true">
+		<h1>Page transition</h1>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#" data_icon="audio" data-iconpos="top">音量</a> </li>
+				<li><a href="#" data_icon="camera" data-iconpos="top">相機</a> </li>
+				<li><a href="#home" data_icon="carat-l" data-iconpos="top">上一頁</a> </li>
+				<li><a href="#" data_icon="carat-r" data-iconpos="top">下一頁</a> </li>
+			</ul>
+
+		</div>
+		 <ul data-role="listview" data-inset="true" data-filter="true" data-split-icon="gear" data-splite-theme="a" >
+			<li data-role="list-divider"> <a href="#">apple</a> </li>
+			<li><a href="#">
+				<img src="face.png">
+				banana<span class="ui-li-count">12</span>
+				<p>friute</p>
+				</a>
+				<a href=""></a>
+			</li>
+			<li data-role="list-divider"> <a href="123.htm">cat</a></li> 
+			<li> pp</li>
+		</ul>
+	</div>
+	<div data-role="collapsible"><h3>Hello</h3>
+	<p>happy</p> </div>
+	<a href="#page5" data-role="button" data-rel="dialog" >訊息視窗一</a>
+	<a href="#page6" data-role="button" data-transition="pop"> 訊息視窗2</a>
+	<div data-role="content">請返回上一頁</div>
+	
+	
+	<div data-role="footer" data-position="fixed"><h4>頁尾</h4>  </div>
+</div>
+<div id="page5" data-role="page">
+		<div data-role="header"> <h1>訊息視窗一</h1> </div>
+		<div data-role="content"><p>您好,這裡是訊息視窗一</p> </div>
+	</div>
+	<div id="page6" data-role="dialog" data-close-btn="right">
+		<div data-role="header"> <h1>訊息視窗2</h1> </div>
+		<div data-role="content"><p>您好,這裡是訊息視窗2</p> </div>
+	</div>
+
+		<div id="page7" data-role="page" >
+		<div data-role="header" data-add-back-btn="true" data-back-btn-text="返回">
+		<a href="#home">返回</a>
+		 <h1>input</h1> </div>
+		<div data-role="content">
+		<form method="get" action="">
+			<label for="inputText">文字</label>
+			<input type="text" name="inputText" id="inputText">
+			<label for="inputPass">密碼:</label>
+			<input type="password" name="inputPass" id="inputPass">
+			<label for="inputNumber">數字:</label>
+			<input type="number" name="inputNumber" id="inputNumber">
+			<label for="inputEmail">電子郵件:</label>
+			<input type="email" name="inputEmail" id="inputEmail">
+			<label for="inputUrl">網址:</label>
+			<input type="url" name="inputUrl" id="inputUrl">
+			<label for="inputTel">電話:</label>
+			<input type="tel" name="inputTel" id="inputTel">
+			<label for="inputSearch">搜尋:</label>
+			<input type="search" name="inputSearch" id="inputSearch">
+			<label for="inputTextarea">說明:</label>
+			<textarea name="inputTextarea" id="inputTextarea" rows="5"></textarea>
+			<input type="submit" name=" button1" id="button1" data-inline="true" value="送出">
+			<input type="reset" name=" button2" id="button2" data-inline="true" value="重設">
+		</form>	
+	    </div>
+	   <div data-role="footer" data-position="fixed"><h4>頁尾</h4>  </div>
+	</div>
+	<div id="page8" data-role="page" >
+		<div data-role="header" data-add-back-btn="true">
+		<a href="#home">返回</a> <h1>Data Time</h1> </div>
+		<div data-role="content">
+			<form method="get" action="">
+				<label for="inputDate">輸入日期</label>
+				<input type="date" name="inputDate" id="inputDate" value="">
+				<label for="inputTime">輸入時間</label>
+				<input type="time" name="inputTime" id="inputTime" value="">
+				<label for="inpuDatetime">輸入日期時間</label>
+				<input type="datetime" name="inpuDatetime" id="inpuDatetime" value="">
+				<label for="inputDatetime2">輸入日期時間</label>
+				<input type="datetime-local" name="inputDatetime2" id="inputDatetime2" value="">
+				<label for="inputMonth">輸入月份</label>
+				<input type="month" name="inputMonth" id="inputMonth" value="">
+				<label for="inputweek">輸入文字週數</label>
+				<input type="week" name="inputweek" id="inputweek" value="">
+			<input type="submit" name=" button3" id="button3" data-inline="true" value="送出">
+			<input type="reset" name=" button3" id="button3" data-inline="true" value="重設">
+			</form>
+		</div>
+	</div>
+
+	<div id="page9" data-role="page" >
+		<div data-role="header" data-add-back-btn="true">
+		<a href="#home">返回</a> <h1>slider</h1> </div>
+		<div data-role="content">
+			<label for="slider-fill">一般滑桿設定填滿並增量值</label>
+			<input type="range" name="slider-fill" id="slider-fill" value="60" min="0"
+			 max="1000" step="50" data-highlight="true">
+			 <label for="slider-fill-mini">設定填滿、小型與軌道樣式滑軌，有BUG</label>
+			 <input type="range" name="slider-fill-mini" id="slider-fill-mini" value="100" min="10" max="100"  data-highlight="true" data-theme="b"data-mini="true" >
+			 <div data-role="rangeslider" data-mini="true">
+			 	<label for="range-1a">範圍滑桿</label>
+			 	<input type="range" name="range-1a" id="range-1a" min="0" max="100" value="40" >
+			 	<label for="range-1b"></label>
+			 	<input type="range" name="range-1b" id="range-1b" min="0" max="100" value="80">
+			 </div>
+			 <label for="slider">開關切換 </label>
+			 <select name="slider" id="slider" data-role="slider">
+			 	<option value="off">off </option>
+			 	<option value="on" selected="">on </option>
+			 </select>
+		</div>
+    </div>
+
+    	<div id="page10" data-role="page" >
+		<div data-role="header" data-add-back-btn="true">
+		<a href="#home">返回</a> <h1>select</h1> </div>
+		<div data-role="content">
+			<fieldset data-role="controlgroup">
+				<legend> 選擇設備(可多選)</legend>
+				<input type="checkbox" name="checkbox-1" id="checkbox-1" checked="" value="電動起子機" >		
+				<label for="checkbox-1">電動起子機</label>
+				<input type="checkbox" name="checkbox-2" id="checkbox-2" value="角切機" >		
+				<label for="checkbox-2">角切機</label>
+				<input type="checkbox" name="checkbox-3" id="checkbox-3" value="磨砂機">		
+				<label for="checkbox-3">磨砂機</label>
+			</fieldset>
+				<fieldset data-role="controlgroup">
+				<legend> 選擇設備(單選)</legend>
+				<input type="radio" name="radio-select" id="radio-1" checked="">		
+				<label for="radio-1">電動起子機</label>
+				<input type="radio" name="radio-select" id="radio-2">		
+				<label for="radio-2">角切機</label>
+				<input type="radio" name="radio-select" id="radio-3">		
+				<label for="radio-3">磨砂機</label>
+			</fieldset>
+
+		</div>
+    </div>
+
+    	<div id="page11" data-role="page" >
+		<div data-role="header" data-add-back-btn="true">
+		<a href="#home">返回</a> <h1>selectMenu</h1> </div>
+		<div data-role="content">
+			<label for="selectmenu">從清單中選擇選項</label>
+			<select name="selectmenu" id="selectmenu">
+				<option value="option1">選項 1 </option>
+				<option value="option2">選項 2 </option>
+				<option value="option3">選項 3 </option>	
+			</select>
+				<label for="selectmenu">從清單中選擇選項</label>
+			<select name="selectmenu" id="selectmenu" data-native-menu="false">
+				<option value="option1">選項 1 </option>
+				<option value="option2">選項 2 </option>
+				<option value="option3">選項 3 </option>	
+			</select>
+		</div>
+    </div>
+
+	<div id="page12" data-role="page" >
+		<div data-role="header" data-add-back-btn="true">
+		<a href="#home">返回</a> <h1>表單</h1> </div>
+		<div data-role="content" >
+			 <a href="#" data-role="button" id="buttonChecked">顯示 </a>
+			 <p id="showevent"></p>
+			 <div data-role="controlgroup" data-type="horizontal" style="text-align: center;">
+			 <button id="getBtn">Get傳送 </button>
+			 <button id="postBtn">Post傳送</button> 
+			</div>
+		</div>
+    </div>
+<script type="text/javascript">
+</script>
+<script > 
+	$(document).on("tap",function(e)
+	{
+		$("#showevent").html("<h1>Event :tap</h1>");
+
+	});
+	$(document).on("taphold",function(e)
+	{
+		$("#showevent").html("<h1>Event :taphold</h1>");
+	});
+	$(document).on("swipe",function(e)
+	{
+		$("#showevent").html("<h1>Event :swipe</h1>");
+	});
+	$(document).on("swipeleft",function(e)
+	{
+		$("#showevent").html("<h1>Event :swipeleft</h1>");
+	});
+	$(document).on("swiperight",function(e)
+	{
+		$("#showevent").html("<h1>Event :swiperight</h1>");
+	});
+	$(document).on("scrollstart",function(e)
+	{
+		$("#showevent1").html("<h1>Event :scrollstart</h1>");
+	});
+		$(document).on("scrollstop",function(e)
+	{
+		$("#showevent1").html("<h1>Event :scrollstop</h1>");
+	});
+$(window).on("orientationchange",function(e)
+{
+	alert('目前螢幕方向是:'+e.orientation)
+})
+$(document).ready(function()
+{
+$("#buttonChecked").click(function()
+	{
+		var msg='文字欄位:'+$("#inputText").val()+"\n";
+		msg+='文字區域欄位\n'+$("#inputTextarea").val()+"\n";
+		msg+='日期時間欄位\n'+$("#inputDatetime2").val()+"\n";
+		msg+='滑桿'+$("#slider-fill").val()+"\n";
+		msg+='切換開關'+$('slider option:checked').val()+"\n"
+		msg+='單選選項'+$('input[name=radio-select]:checked').val()+"\n"
+		var msg1='多選選項:'
+		$('input[type="checkbox"]:checked').each(function()
+			{	msg1+=$(this).val()+' ';}
+			)
+	    msg+=msg1+"\n";
+	    msg+='下拉式選單:'+$('#selectmenu option:checked').val();
+
+		alert(msg);
+
+	});
+
+});
+</script>
+
+
+</body></html>
